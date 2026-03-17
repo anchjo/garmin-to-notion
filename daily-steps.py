@@ -75,11 +75,11 @@ def create_daily_steps(client, database_id, steps):
     if total_distance is None:
         total_distance = 0
     properties = {
-        "Activity Type": {"title": [{"text": {"content": "Walking"}}]},
-        "Date": {"date": {"start": steps.get('calendarDate')}},
-        "Total Steps": {"number": steps.get('totalSteps')},
-        "Step Goal": {"number": steps.get('stepGoal')},
-        "Total Distance (km)": {"number": round(total_distance / 1000, 2)}
+        "Aktiviteetti": {"title": [{"text": {"content": "Walking"}}]},
+        "Pvm": {"date": {"start": steps.get('calendarDate')}},
+        "Askeleet": {"number": steps.get('totalSteps')},
+        "Tavoite": {"number": steps.get('stepGoal')},
+        "Kokonaismatka (km)": {"number": round(total_distance / 1000, 2)}
     }
     
     page = {
